@@ -1,0 +1,31 @@
+{
+  "name": "scaffnode",
+  "version": "0.1.0",
+  "description": "Scaffold Node.js backend projects",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "bin": {
+    "scaffnode": "dist/index.js"
+  },
+  "scripts": {
+    "dev": "ts-node bin/index.ts", 
+    "build": "tsc --build",
+    "start": "node dist/index.js",
+    "clean": "rimraf dist",
+    "prepublishOnly": "pnpm run clean && pnpm run build"
+  },
+  "keywords": ["cli", "scaffold", "node", "backend"],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.16.1",
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.1",
+    "degit": "^2.8.4",
+    "prompts": "^2.4.2",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
