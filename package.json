@@ -8,13 +8,25 @@
     "scaffnode": "dist/index.js"
   },
   "scripts": {
-    "dev": "ts-node bin/index.ts", 
+    "dev": "ts-node bin/index.ts",
     "build": "tsc --build",
+    "format:bin": "prettier --write 'bin/**/*.{js,ts,jsx,tsx,json,css,md}'",
+    "format:templates": "prettier --write 'templates/**/*.{js,ts,jsx,tsx,json,css,md}'",
+    "format:all": "npm run format:bin && npm run format:templates",
     "start": "node dist/index.js",
+    "prepare": "husky",
     "clean": "rimraf dist",
-    "prepublishOnly": "pnpm run clean && pnpm run build"
+    "prepublishOnly": "pnpm run clean && pnpm run build",
+    "release:patch": "pnpm version patch && git push --follow-tags",
+    "release:minor": "pnpm version minor && git push --follow-tags",
+    "release:major": "pnpm version major && git push --follow-tags"
   },
-  "keywords": ["cli", "scaffold", "node", "backend"],
+  "keywords": [
+    "cli",
+    "scaffold",
+    "node",
+    "backend"
+  ],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.16.1",
@@ -23,6 +35,9 @@
     "chalk": "^5.6.2",
     "commander": "^14.0.1",
     "degit": "^2.8.4",
+    "eslint": "^9.35.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.6.2",
     "prompts": "^2.4.2",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",

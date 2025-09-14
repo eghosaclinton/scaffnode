@@ -1,6 +1,1 @@
-{
-  "root": [
-    "./bin/index.ts"
-  ],
-  "version": "5.9.2"
-}
+{"root":["./bin/index.ts"],"version":"5.9.2"}
