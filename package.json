@@ -11,6 +11,9 @@
     "type": "git",
     "url": "https://github.com/eghosaclinton/scaffnode"
   },
+   "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "ts-node src/bin/index.ts",
     "build": "tsc --build",
