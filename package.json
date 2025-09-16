@@ -1,18 +1,20 @@
 {
   "name": "scaffnode",
   "version": "0.1.0",
-  "description": "Scaffold Node.js backend projects",
+  "description": "Quick-start CLI for Node.js web frameworks",
   "type": "commonjs",
-  "main": "dist/index.js",
+  "main": "dist/bin/index.js",
   "bin": {
-    "scaffnode": "dist/index.js"
+    "scaffnode": "dist/bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eghosaclinton/scaffnode"
   },
   "scripts": {
-    "dev": "ts-node bin/index.ts",
+    "dev": "ts-node src/bin/index.ts",
     "build": "tsc --build",
-    "format:bin": "prettier --write 'bin/**/*.{js,ts,jsx,tsx,json,css,md}'",
-    "format:templates": "prettier --write 'templates/**/*.{js,ts,jsx,tsx,json,css,md}'",
-    "format:all": "npm run format:bin && npm run format:templates",
+    "format": "prettier --write 'src/**/*.{js,ts,jsx,tsx,json,css,md}'",
     "start": "node dist/index.js",
     "prepare": "husky",
     "clean": "rimraf dist",
@@ -23,15 +25,16 @@
   },
   "keywords": [
     "cli",
-    "scaffold",
+    "bootstrap",
     "node",
     "backend"
   ],
-  "author": "",
+  "author": "a1s0sa",
   "license": "ISC",
   "packageManager": "pnpm@10.16.1",
   "devDependencies": {
     "@types/node": "^22.7.4",
+    "@types/prompts": "^2.4.9",
     "chalk": "^5.6.2",
     "commander": "^14.0.1",
     "degit": "^2.8.4",
@@ -41,6 +44,10 @@
     "prompts": "^2.4.2",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "update-check": "^1.5.4"
+  },
+  "engines": {
+    "node": ">=20.9.0"
   }
 }

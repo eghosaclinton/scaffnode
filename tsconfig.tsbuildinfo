@@ -1,1 +1,1 @@
-{"root":["./bin/index.ts"],"version":"5.9.2"}
+{"root":["./src/bin/index.ts","./src/lib/@types/index.d.ts","./src/utils/getpackagemanager.ts"],"version":"5.9.2"}
