@@ -1,6 +1,6 @@
 {
   "name": "scaffnode",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Quick-start CLI for Node.js web frameworks",
   "type": "commonjs",
   "main": "dist/bin/index.js",
