@@ -1,6 +1,6 @@
 {
   "name": "scaffnode",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Quick-start CLI for Node.js web frameworks",
   "type": "commonjs",
   "main": "dist/bin/index.js",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "https://github.com/eghosaclinton/scaffnode"
   },
-   "files": [
+  "files": [
     "dist"
   ],
   "scripts": {
